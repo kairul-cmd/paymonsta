@@ -127,7 +127,7 @@ export function Header() {
         {/* Navigation */}
         <nav style={navStyles}>
           <Link
-            href="#features"
+            href="/features"
             style={navLinkStyles}
             onMouseEnter={handleNavHover}
             onMouseLeave={handleNavLeave}
@@ -135,20 +135,20 @@ export function Header() {
             Features
           </Link>
           <Link
-            href="#how-it-works"
-            style={navLinkStyles}
-            onMouseEnter={handleNavHover}
-            onMouseLeave={handleNavLeave}
-          >
-            How it Works
-          </Link>
-          <Link
-            href="#security"
+            href="/security"
             style={navLinkStyles}
             onMouseEnter={handleNavHover}
             onMouseLeave={handleNavLeave}
           >
             Security
+          </Link>
+          <Link
+            href="/privacy"
+            style={navLinkStyles}
+            onMouseEnter={handleNavHover}
+            onMouseLeave={handleNavLeave}
+          >
+            Privacy
           </Link>
           <Link
             href="#contact"

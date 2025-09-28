@@ -13,6 +13,7 @@
     "@boundaryml/baml": "^0.208.5",
     "@boundaryml/baml-nextjs-plugin": "^0.1.0",
     "@paymonsta/baml": "workspace:*",
+    "lucide-react": "^0.544.0",
     "next": "^15.5.0",
     "pdf-parse": "^1.1.1",
     "react": "^18.3.0",
