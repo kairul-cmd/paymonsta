@@ -1,0 +1,21 @@
+{
+  "name": "@paymonsta/baml",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./baml_client/baml_client/index.ts",
+  "types": "./baml_client/baml_client/index.ts",
+  "exports": {
+    ".": {
+      "import": "./baml_client/baml_client/index.ts",
+      "require": "./baml_client/baml_client/index.ts",
+      "types": "./baml_client/baml_client/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "npx @boundaryml/baml generate",
+    "dev": "npx @boundaryml/baml generate --watch"
+  },
+  "dependencies": {
+    "@boundaryml/baml": "^0.208.5"
+  }
+}

@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PayMonsta Design System - 2025 Minimalist Theme */
+:root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  
+  /* Color palette */
+  --color-background: #181818;
+  --color-surface: #222222;
+  --color-primary: #da5590;
+  --color-text: #eeeee4;
+  --color-text-secondary: #a8a8a0;
+  --color-text-muted: #6b6b65;
+  --color-border: #333333;
+  --color-border-light: #2a2a2a;
+  
+  /* Interactive states */
+  --color-primary-hover: #e66ba3;
+  --color-primary-active: #c44580;
+  --color-surface-hover: #2a2a2a;
+  
+  /* Semantic colors */
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-inter);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+/* Smooth transitions for interactive elements */
+button, input, textarea, select {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Remove default button styles - but preserve custom buttons */
+button:not(.paymonsta-button) {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+/* PayMonsta Button Component Styles - Override all resets */
+.paymonsta-button {
+  /* Force override Tailwind and global resets with higher specificity */
+  background: var(--button-bg) !important;
+  border: var(--button-border) !important;
+  color: var(--button-color) !important;
+  padding: var(--button-padding) !important;
+  font-weight: var(--button-font-weight) !important;
+  border-radius: var(--button-border-radius) !important;
+  font-family: var(--font-inter) !important;
+  transition: all 0.2s ease-in-out !important;
+  cursor: pointer !important;
+  outline: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  min-height: 44px !important;
+  box-sizing: border-box !important;
+}
+
+.paymonsta-button:hover {
+  background: var(--button-bg-hover) !important;
+}
+
+.paymonsta-button:active {
+  background: var(--button-bg-active) !important;
+}
+
+.paymonsta-button:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* Remove default input styles */
+input, textarea, select {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  outline: none;
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .gradient-primary {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-hover) 100%);
+  }
+  
+  .gradient-surface {
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-hover) 100%);
+  }
+  
+  .shadow-glow {
+    box-shadow: 0 0 20px rgba(218, 85, 144, 0.3);
+  }
+  
+  /* Loading spinner animation */
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}

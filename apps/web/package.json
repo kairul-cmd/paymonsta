@@ -1,0 +1,38 @@
+{
+  "name": "@paymonsta/web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@boundaryml/baml": "^0.208.5",
+    "@boundaryml/baml-nextjs-plugin": "^0.1.0",
+    "@paymonsta/baml": "workspace:*",
+    "next": "^15.5.0",
+    "pdf-parse": "^1.1.1",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0"
+  },
+  "devDependencies": {
+    "@eslint/compat": "^1.2.0",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.36.0",
+    "@types/node": "^22.0.0",
+    "@types/pdf-parse": "^1.1.5",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^9.36.0",
+    "eslint-config-next": "^15.5.0",
+    "ignore-loader": "^0.1.2",
+    "node-loader": "^2.0.0",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.7.0"
+  }
+}
